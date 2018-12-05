@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     virtualbox.vm.network :private_network, ip: "172.16.3.2"
 
     config.vm.provider :virtualbox do |v|
-      v.gui = false
+      v.gui = true
       v.memory = 1024
       v.cpus = 1
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
